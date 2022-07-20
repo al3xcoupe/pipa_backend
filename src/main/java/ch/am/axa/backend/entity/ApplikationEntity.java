@@ -1,6 +1,10 @@
 package ch.am.axa.backend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "application")
@@ -13,6 +17,10 @@ public class ApplikationEntity {
 
     @Column(name = "app_owner_email", nullable = false)
     private String app_owner_email;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "app_idfs")
+    private Set<TranslationEntry> translationEntries = new LinkedHashSet<>();
 
     public ApplikationEntity() {
     }
@@ -31,5 +39,13 @@ public class ApplikationEntity {
 
     public void setApp_owner_email(String app_owner_email) {
         this.app_owner_email = app_owner_email;
+    }
+
+    public Set<TranslationEntry> getTranslationEntries() {
+        return translationEntries;
+    }
+
+    public void setTranslationEntries(Set<TranslationEntry> translationEntries) {
+        this.translationEntries = translationEntries;
     }
 }
