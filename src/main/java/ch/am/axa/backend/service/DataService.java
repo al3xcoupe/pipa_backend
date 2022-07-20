@@ -10,12 +10,14 @@ import ch.am.axa.backend.repository.LanguageRepository;
 import ch.am.axa.backend.repository.TranslationEntryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@CrossOrigin
 public class DataService {
 
     private final ApplikationRepository applikationRepository;
