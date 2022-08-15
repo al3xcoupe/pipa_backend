@@ -3,7 +3,7 @@ package ch.am.axa.backend.entity;
 import java.io.Serializable;
 
 public class TranslationKey implements Serializable {
-    private String text;
-    private String app_idfs;
-    private String lang_idfs;
+    public String text_id;
+    public String app_idfs;
+    public String lang_idfs;
 }
