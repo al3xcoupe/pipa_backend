@@ -5,6 +5,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.util.LinkedHashSet;
 import java.util.Set;
+/**
+ * @author : Alexander Margraf
+ * @version : 18.08.2022
+ */
 
 @Entity
 @Table(name = "application")
@@ -20,7 +24,7 @@ public class ApplikationEntity {
 
     @JsonIgnore
     @OneToMany(mappedBy = "app_idfs")
-    private Set<TranslationEntry> translationEntries = new LinkedHashSet<>();
+    private Set<TranslationEntity> translationEntries = new LinkedHashSet<>();
 
     public ApplikationEntity() {
     }
@@ -39,13 +43,5 @@ public class ApplikationEntity {
 
     public void setApp_owner_email(String app_owner_email) {
         this.app_owner_email = app_owner_email;
-    }
-
-    public Set<TranslationEntry> getTranslationEntries() {
-        return translationEntries;
-    }
-
-    public void setTranslationEntries(Set<TranslationEntry> translationEntries) {
-        this.translationEntries = translationEntries;
     }
 }
