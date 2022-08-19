@@ -13,6 +13,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author : Alexander Margraf
+ * @version : 18.08.2022
+ */
 @Component
 public class SimpleCORSFilter implements Filter {
 
@@ -46,3 +50,4 @@ public class SimpleCORSFilter implements Filter {
     }
 
 }
+

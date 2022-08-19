@@ -1,7 +1,6 @@
 package ch.am.axa.backend.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -9,7 +8,6 @@ import java.util.Set;
  * @author : Alexander Margraf
  * @version : 18.08.2022
  */
-
 @Entity
 @Table(name = "application")
 public class ApplikationEntity {
